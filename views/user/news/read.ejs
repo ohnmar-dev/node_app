@@ -1,0 +1,269 @@
+<%- include('../includes/header') %>
+  
+</head>
+<body>
+      <%- include('../includes/navigation') %>
+    <div class="read">
+        <h3><a href="/"><i class="bi bi-arrow-left"></i> Back</a></h3>
+        <div class="row mt-5 ">
+
+            <div class="col-lg-9 col-sm-12">
+                <h4 style="line-height:1.6rem;" class="fw-bold"><%= oneNews.title %></h4>
+                <div style="background-image: url('/img/en-1.jpg');height:500px" class="for-all-image mt-4" alt="" ></div>
+                <div class="mt-3">
+                  <div class="mb-4">
+                    <small class="fw-bold new-name">သတင်းတို</small>
+                    <br>
+                    <small class="fw-bold new-name"><%= oneNews.date %></small>
+                  </div>
+                  <p style="line-height:1.8rem;" >
+                    <%= oneNews.description %>
+                  </p>
+
+
+                  <!-- <div style="background-image: url('/img/food-1.jpg');height:500px" class="for-all-image" alt="" ></div>
+                  <p style="line-height:1.8rem;" >
+                    ပြီး0ဲ့တဲ့အ0န်းမှာ ပြော0ဲ့သလိုပဲ Bitcoin ကို ၂၀၀၈ 0ုနှစ်၊ နိုRင်ဘာလ (၁) ရက်နေ့မှာ Satoshi
+                    Nakamoto ဆိုတဲ့ ကလောင်အမည်ကို အသုံးပြုထားသူတစ်ဦးက Cryptography Mailing List တစ်0ုမှာ
+                    အိုင်ဒီယာ အသေးစိတ်ကို White Paper နဲ့တစ်ကွ ဖြန့်ဝေRခြ0င်းအားဖြင့် စတင်0ဲ့တာ ဖြစ်ပါတယ်။ 
+                    ၂၀၀၈ 0ုနှစ်ဟာ ကမ္ဘာ့စီးပွားရေးအတွက် ထူးခြ0ားအရေးပါတဲ့ နှစ်တစ်နှစ်ပါ။ အမေရိကန်နိုင်ငံရဲ့ အိမ်ခြ0ံမြေ
+                    စျေးကွက် ပြိုလဲခြ0င်းရဲ့ နောက်ဆက်တွဲ ရိုက်0တ်မှုနဲ့အတူ ကမ္ဘာ့ငွေကြေးစီးပွားပျက်ကပ်ကြီးကို ရင်ဆိုင်0ဲ့
+                    ကြရတဲ့ နှစ်တစ်နှစ်ပဲ ဖြစ်ပါတယ်။ 2008 Financial Crisis လို့ ဝေ0ါ်ကြသလို 2008 Housing Crisis လို့
+                    လည်း ဝေ0ါ်ကြပါတယ်။ 2008 Subprime Mortgage Crisis လို့လည်း ဝေ0ါ်ကြပါသေးတယ်။
+                    2008 Financial Crisis
+                    ၂၀၀၈ 0ုနှစ် ကမ္ဘာ့ငွေကြေးစီးပွားပျက်ကပ်ရဲ့ ရိုက်0တ်မှုကြောင့် အမေရိကန်နဲ့ ကမ္ဘာအနှံ့အပြားမှာ အိမ်ခြ0ံ
+                    မြေစျေးတွေ ထိုးကျပြီး ဘဏ်နဲ့ ငွေကြေးအဖွဲ့အစည်းတွေဒေRါလီ0ံ0ဲ့ကြရပါတယ်။ ဘဏ်တွေအပေါ် လူ
+                    တွေရဲ့ ယုံကြည်မှုပျက်ပြားသွားခြ0င်းအပါအRင် နောက်ဆက်တွဲ ရိုက်0တ်မှုတွေကြောင့် စီးပွားရေးလုပ်ငန်း
+                    တွေ ပျက်ကြရပြီး လူသန်းပေါင်းများစွာ အလုပ်လုပ်မဲ့ဖြစ်ကြရ၊ အိုးမဲ့အိမ်မဲ့တွေဖြစ်0ဲ့ကြရပါတယ်။ IMF ရဲ့
+                    0န့်မှန်း0ျက်အရ အမေရိကန်နဲ့ ဥရောပဘဏ်တွေရဲ့ ဆုံးရှုံးမှုဟာ ဒေါ်လာ (၁) ထရီလီယံ အထိ ရှိ0ဲ့တယ်လို့
+                    ဆိုပါတယ်။ ဒါဟာ ၂၀၀၈ 0ုနှစ်ရဲ့ ဆုံးရှံးမှုပမာဏဖြစ်ပြီး စီးပွားပျက်ကပ်အကြိုနဲ့ နောက်ဆက်တွဲ ကာလ
+                    ကိုပါ ထည့်တွက်ရင် ဒီထက် ပိုပါလိမ့်ဦးမယ်။ ဒီဆုံးရှုံးနစ်နာမှုတွေဟာ ငွေကြေးစီမံ0န့်0ွဲသူတွေရဲ့ လိုတာ
+                    ထက်ပိုတဲ့ အလွန်အကျွံ စွန့်စားမှုတွေကြောင့် ဖြစ်0ဲ့ရတာ ဖြစ်သလို၊ ဒီအဖွဲ့အစည်းတွေကို စောင့်ကြည့်
+                    ကြီးကြပ်ရမယ့် သက်ဆိုင်ရာအာဏာပိုင်တွေရဲ့ တာRန်ပျက်ကွက်မှုကြောင့် လို့လည်း ဆိုကြပါတယ်
+                  </p> -->
+                 
+                </div>
+
+                </div>
+                <div class="col-lg-3 col-sm-12 read-hover" >
+                  <div class="row">
+                    <h4 class="fw-bold">Health</h4>
+                  
+                    <div class="col-5 ">
+                      <a href="#">
+                        <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                      </a>
+                      <a href="#">
+                        <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                      </a>
+                    </div>
+                    <div class="col-7">
+                      <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                      <p>
+                        <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                        <small class="float-end fw-bold new-name">28/06/2020</small>
+                      </p>
+                    </div>
+    
+                    <hr class="mt-3">
+    
+                    <div class="col-5 ">
+                      <a href="#">
+                        <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                      </a>
+                      <a href="#">
+                        <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                      </a>
+                    </div>
+                    <div class="col-7">
+                      <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                      <p>
+                        <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                        <small class="float-end fw-bold new-name">28/06/2020</small>
+                      </p>
+                    </div> 
+                    <hr class="mt-3">
+                    <div class="col-5 ">
+                      <a href="#">
+                        <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                      </a>
+                      <a href="#">
+                        <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                      </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div>
+      
+                      <hr class="mt-3">
+      
+                      <div class="col-5 ">
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div> 
+                      <hr class="mt-3">
+                      <div class="col-5 ">
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div>
+      
+                      <hr class="mt-3">
+      
+                      <div class="col-5 ">
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div> 
+                      <hr class="mt-3">
+                      <div class="col-5 ">
+                        
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div>
+      
+                      <hr class="mt-3">
+      
+                      <div class="col-5 ">
+                       
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div> 
+                      <hr class="mt-3">
+                      <div class="col-5 ">
+                       
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div>
+      
+                      <hr class="mt-3">
+      
+                      <div class="col-5 ">
+                        
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div> 
+                      <hr class="mt-3">
+                      <div class="col-5 ">
+                       
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div>
+      
+                      <hr class="mt-3">
+      
+                      <div class="col-5 ">
+                        <a href="#">
+                          <div style="background-image: url('/img/food-1.jpg');height:100px" class="for-all-image hide-in-mobile" alt="" ></div>
+                        </a>
+                        <a href="#">
+                          <img style="display:none;" src="/img/food-1.jpg" class="img-thumbnail my-thumbnail show-in-mobile" alt="">
+                        </a>
+                      </div>
+                      <div class="col-7">
+                        <small class="title"><a href="#">ကြားခံအဖွဲ့အစည်း မလိုဘဲ တိုက်ရိုက် ဖလှယ်နိုင်သော ဒစ်ဂျစ်တယ် ငွေကြေးစနစ်သစ်</a></small>
+                        <p>
+                          <small class="fw-bold new-name"><i class="bi bi-eye"></i> 12</small>
+                          <small class="float-end fw-bold new-name">28/06/2020</small>
+                        </p>
+                      </div> 
+                </div>  
+            </div>
+            
+
+        </div>
+          <!-- END  ROW -->
+
+    </div>
+
+ <%- include('../includes/footer') %>

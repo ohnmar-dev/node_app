@@ -1,0 +1,108 @@
+<%- include('../includes/head') %>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <%- include('../includes/navigation') %>
+  
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Posts Form</h5>
+            <% if(errorMessage){ %>
+              <small class="text-danger"><%= errorMessage %></small>
+            <%}%>
+            <!-- Horizontal Form -->
+            <form action="/admin/<% if(!editing || hasError){ %>news<% }else{ %>edit-news<% }%>" method="post" enctype="multipart/form-data" >
+              
+             
+                <div class="row mb-3">
+                    <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                      
+                      <input 
+                      type="text" 
+                      name="title" 
+                      class="form-control" 
+                      placeholder="Place, enter title"
+                      value="<%if(editing || hasError){%><%= oneNew.title %><% } %>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputImage" class="col-sm-2 col-form-label">Image </label>
+                    <div class="col-sm-10 ">
+                      <input type="file" 
+                      name="image"
+                      class="form-control" 
+                      value="<%if(editing || hasError){%><%=oneNew.image%><%}%>" 
+                      > 
+                    </div>
+                </div>
+                <!-- <div class="row mb-3">
+                  <label for="Category" class="col-sm-2 col-form-label">Category</label>
+                    <div class="col-sm-10">
+                      <select name="category" id="Category" class="form-control">
+
+                      </select>
+                    
+                    </div>
+                </div> -->
+
+                <div class="row mb-3">
+                  <label for="InputDate" class="col-sm-2 col-form-label">Date</label>
+                  <div class="col-sm-10">
+                    <input type="date" 
+                    name='date'
+                    class="form-control" 
+                    value="<%if(editing || hasError){%><%=oneNew.date%><%}%>">
+                  </div>
+                </div>
+              
+                <div class="row mb-3">
+                  <label for="Inputdescription" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea 
+                    name="description" 
+                    class="form-control" 
+                    cols="30" rows="10">
+                      <% if(editing || hasError) { %><%= oneNew.description %><% } %>
+                    </textarea>
+                  </div>
+                </div> 
+                <%if(editing){%>
+                  <input type="hidden" name="newsId" value="<%= oneNew._id%>">
+                  <%}%>
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button type="submit" class="btn btn-primary">
+                    <% if(editing){%>
+                          Update
+                      <%}else{%>
+                        Create
+                        <%}%>
+
+                  </button>
+                  <!-- <button type="reset" class="btn btn-danger">Reset</button> -->
+           
+            </form><!-- End Horizontal Form -->
+
+          </div>
+        </div> 
+
+        
+
+      </div>
+
+    
+    </div>
+    
+  </section>
+
+  <%- include('../includes/foot') %>
+  <%- include('../includes/footer') %>

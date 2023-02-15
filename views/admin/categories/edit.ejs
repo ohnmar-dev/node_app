@@ -1,0 +1,109 @@
+<%- include('../includes/head') %>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <%- include('../includes/navigation') %>
+  
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-6">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Category Form</h5>
+           <% if(errorMessage){%>
+            <small class="text-danger"><%= errorMessage %></small>
+            <%}%>
+            <!-- Horizontal Form -->
+            <form method="POST" action="/admin/<% if(!editing){%>category<%}else{%>category-edit<%}%>" novalidate>
+             
+              <div class="row mb-3">
+                <label for="category" class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-10">
+                  <input type="text" name="category" class="form-control" id="category"
+                  value="<%if(editing) {%><%=category.title%><%}%>" placeholder="enter category ....">
+                  <div class="mt-5">
+                    <% if(editing) {%>
+                      <input type="hidden" name="categoryId" value="<%= category._id%>">
+                      <% } %>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button type="submit" class="btn btn-primary">
+                    <% if(editing){ %>
+                      Update
+                      <% }else{ %>
+                        Create
+                        <% } %>
+                    </button>
+                  <!-- <button type="reset" class="btn btn-danger">Reset</button> -->
+                  </div>
+                </div>
+              </div>
+              
+             
+            </form><!-- End Horizontal Form -->
+
+          </div>
+        </div> 
+
+        
+
+      </div>
+
+      <div class="col-lg-6">
+        <% if(editing) {%>
+          ....
+          <% }else{ %>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Category Show Table</h5>
+
+            <!-- Table with hoverable rows -->
+            <table class="table table-hover text-center">
+              <thead>
+                <tr>
+                  <!-- <th scope="col">#</th> -->
+                  <th scope="col">Name</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if (categories.length > 0) { %>
+                <tr>
+                  <% for(let category of categories) {%>
+                  <!-- <th scope="row"><%= category.id %></th> -->
+                  <td><%= category.title %></td>
+                  <td>
+                    <a href="/admin/category-edit/<%= category._id %>?edit=true" class="btn btn-primary btn-sm">
+                      <i class="bi bi-upload"></i>
+                    </a>
+                    
+                    <form action="/admin/delete" method="post" class="justify-content-end">
+                      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                      <input type="hidden" name="categoryId" value="<%= category._id %>">
+                      <button  class="btn btn-danger btn-sm"><i class="bi bi-trash "type="submit"></i></button>
+                  </form>
+                  </td>
+                </tr>
+                <% } %>
+                <% } else { %>
+                  <h1>Category Not Fouund</h1>
+                  <% } %>
+              </tbody>
+            </table>
+            <!-- End Table with hoverable rows -->
+
+          </div>
+        </div>
+        <% } %>
+
+      </div>
+    </div>
+  </section>
+
+  <%- include('../includes/foot') %>
+  <%- include('../includes/footer') %>

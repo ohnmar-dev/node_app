@@ -1,0 +1,84 @@
+
+<%- include('../includes/head') %>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <%- include('../includes/navigation') %>
+  
+
+  <section class="section">
+        <!-- second row -->
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mouth Show Table</h5>
+    
+                        <!-- Table with hoverable rows -->
+                        <table class="table table-hover text-center">
+                          <thead>
+                            <tr>
+                              <th scope="col">Title</th>
+                              <th scope="col">Image</th>
+                              <th scope="col">Description</th>
+                              <th>Date</th>
+                              <th scope="col">Action</th>
+                            </tr>
+                          </thead>
+                          <% if(mouths.length>0) {%>
+                            <% for(let mouth of mouths) {%>
+                          <tbody>
+                            <tr>
+                              
+                              <td style="font-size:9px"><%= mouth.title.substring(0,20)+"......" %></td>
+                              <td><img src="/<%= mouth.image %>" alt="<%= mouth.image %>" class="rounded-circle " style="width:40px; height:40px" ></td>
+                              <td style="font-size:9px"><%= mouth.description.substring(0,15)+"..." %></td>
+                              <td><%= mouth.date %></td>
+                             
+                              <td>
+                                <a href="/admin/detail-mouth/<%= mouth._id %>" class="btn btn-info btn-sm">
+                                  <i class="bi bi-eye"></i>
+                                </a>
+                                <a href="/admin/edit-mouth/<%= mouth._id %>?edit=true" class="btn btn-primary btn-sm">
+                                  <i class="bi bi-upload"></i>
+                                </a>
+                               
+                                <form action="/admin/delete-mouth" method="post">
+                                  <input type="hidden" name="mouthId" value="<%= mouth._id %>">
+                                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                  <button type="submit" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </form>
+    
+                              </td>
+                             
+                            </tr>
+                            
+                          </tbody>
+                          <% } %>
+                          <%- include('../includes/pagination.ejs',{current:current,
+                                  nextPage:nextPage,
+                                  previousPage,
+                                  previousPage, 
+                                  lastPage:lastPage,
+                                  hasNextPage:hasNextPage,
+                                hasPreviousPage:hasPreviousPage}) %>
+                          <%}else{%>
+                            <h1>Mouth Not Found</h1>
+                            <%}%>
+                        </table>
+    
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <!-- end second row -->
+      
+    
+  </section>
+
+  <%- include('../includes/foot') %>
+  <%- include('../includes/footer') %>

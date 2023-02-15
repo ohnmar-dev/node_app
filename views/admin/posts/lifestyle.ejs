@@ -1,0 +1,98 @@
+<%- include('../includes/head') %>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <%- include('../includes/navigation') %>
+  
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">LifeStyle Form</h5>
+            <% if(errorMessage){%>
+              <small class="text-danger"><%= errorMessage %></small>
+              <%}%>
+            <!-- Horizontal Form -->
+            <form action="/admin/<%if(!editing){%>lifestyle<%}else{%>edit-life<%}%>" method="post" enctype="multipart/form-data" novalidate>
+             
+                <div class="row mb-3">
+                    <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="title"class="form-control" id="inputTitle" placeholder="Place, enter title"
+                       value="<%if(editing){%><%= life.title %><%}%>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputImage" class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                      <input type="file" class="form-control" name="image" value="<%if(editing){%><%= life.image %><%}%>">
+                    </div>
+                </div>
+              
+                <!-- <div class="row mb-3">
+                  <label for="Category" class="col-sm-2 col-form-label">Category</label>
+                    <div class="col-sm-10">
+                      <select name="category" id="Category" class="form-control">
+
+                      </select>
+                    </div>
+                </div> -->
+
+                <div class="row mb-3">
+                  <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control" id="inputDate" name="date" value="<%if(editing){%><%= life.date %><%}%>">
+                  </div>
+              </div> 
+
+                <div class="row mb-3">
+                  <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" name="description" id="description" cols="30" rows="10">
+                      <%if(editing){%>
+                        <%= life.description %>
+                        <%}%>
+                    </textarea>
+                  </div>
+                </div> 
+                <div class="">
+                  <%if(editing) {%>
+                    <input type="hidden" name="lifeId" value="<%= life._id %>">
+                    <% } %>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button type="submit" class="btn btn-primary">
+                    <%if(editing){%>
+                    Update
+                    <%}else{%>
+                      Create
+                      <%}%>
+                  </button>
+                  <!-- <button type="reset" class="btn btn-danger">Reset</button> -->
+                </div>
+              
+
+              
+             
+            </form><!-- End Horizontal Form -->
+
+          </div>
+        </div> 
+
+        
+
+      </div>
+
+    
+    </div>
+    
+  </section>
+
+  <%- include('../includes/foot') %>
+  <%- include('../includes/footer') %>

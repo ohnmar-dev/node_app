@@ -1,0 +1,23 @@
+<!-- pagination -->
+                          
+<nav aria-label="Page navigation example ">
+                              
+    <ul class="pagination justify-content-end">
+    <% if(current !== 1 && previousPage !==1) { %>
+          <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+      <% } %>
+
+      <% if(hasPreviousPage){ %>
+        <li class="page-item"><a class="page-link" href="?page=<%= previousPage %>"><%= previousPage %></a></li>
+      <% } %>
+      <li class="page-item"><a class="page-link" href="?page=<%= current %>"><%= current %></a></li>
+      <% if(hasNextPage){ %>
+        <li class="page-item"><a class="page-link" href="?page=<%= nextPage %>"><%= nextPage %></a></li>
+      <% } %>
+
+      <% if(current !== lastPage && nextPage !== lastPage) { %>
+        <li class="page-item"><a class="page-link" href="?page=<%= lastPage %>"><%= lastPage %></a></li>
+    <% } %>
+
+    </ul>
+</nav>

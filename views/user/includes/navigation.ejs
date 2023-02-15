@@ -1,0 +1,121 @@
+
+  <!-- navbar -->
+  <nav style="margin-top: -15px;" class="navbar navbar-expand-lg sticky-top">
+    <span class="container-fluid ">
+      <a class="navbar-brand bold" href="#">
+        <span class="bold mt-2" style="letter-spacing: 1px;color: #b5300b;font-size: 26px;">News Site</span>
+      </a>
+      <ul class="navbar-nav magin ms-auto mb-lg-0 me-4">
+        <li style="cursor: pointer;">
+             <i class="bi bi-search search-bar-toggle"></i>   
+        </li>
+      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mt-2 mb-lg-0">
+          <li class="nav-item pe-4">
+            <a class="my-nav nav-link my-active <%= path==='/'?'active':''%>" href="/">
+              သတင်း
+            </a>
+          </li>
+          <li class="nav-item pe-4">
+            <a class="my-nav nav-link <%= path==='/military'?'active':''%> " href="/military">Military</a>
+          </li>
+          <li class="nav-item pe-4">
+            <a class="my-nav nav-link <%= path==='/interview'?'active':''%> " href="/interview">Interview</a>
+          </li>
+          <!-- drop down -->
+          <li class="nav-item pe-4 dropdown">
+            <a class="my-nav nav nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Life-Style
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item  <%= path==='/food'?'active':''%>" href="/food">အစားအသောက် </a></li>
+              <li><a class="dropdown-item <%= path==='/health'?'active':''%>"  href="/health">ကျန်းမာရေး</a></li>
+              <li><a class="dropdown-item <%= path==='/sport'?'active':''%>" href="/sport">အားကစား</a></li>
+
+            </ul>
+          </li>
+          <!-- end of drop down -->
+
+          <!-- drop down -->
+          <li class="nav-item pe-4 dropdown">
+            <a class="my-nav nav nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              အာဘော် 
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item <%= path ==='/cartoon'?'active':''%>" href="/cartoon">Cartoon</a></li>
+                <li><a class="dropdown-item <%= path==='/business'?'active':''%>" href="/business">Business</a></li>
+                <li><a class="dropdown-item <%= path ==='/it'?'active':''%>" href="/it">IT Knowledge</a></li>
+                <li><a class="dropdown-item <%= path ==='/artical'?'active':''%>" href="/artical">ဆောင်းပါး</a></li>
+                <li><a class="dropdown-item <%= path ==='/poem'?'active':''%>" href="/poem">ကဗျာ</a></li>
+                  
+            </ul>
+          </li>
+          
+          <!-- end of drop down -->
+
+          <!-- drop down -->
+          <li class="nav-item pe-4 dropdown">
+            <a class="my-nav nav nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Alliances
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item <%= path==='/women'?'active':''%>" href="/women">အမျိုးသမိးရေးရာ</a></li>
+              <li><a class="dropdown-item <%= path==='/entertainment'?'active':''%>" href="/entertainment">Entertainment</a></li>
+              <li><a class="dropdown-item <%= path==='/travel'?'active':''%>" href="/travel">Travel</a></li>
+
+            </ul>
+          </li>
+          <!-- end of drop down -->
+
+          <!-- drop down -->
+          <li class="nav-item dropdown">
+            <a class="my-nav nav nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Video & Photo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item <%= path==='/video'?'active':''%>" href="/video">Video</a></li>
+              <li><a class="dropdown-item <%= path==='/image'?'active':''%>" href="/image">Photo</a></li>
+            </ul>
+          </li>
+          <!-- end of drop down -->
+
+          <li class="ps-4 dste" style="display: none;">
+            <a style="cursor: pointer;" class=" nav-link">
+              <i class="bi bi-search my-search-bar-toggle"></i> 
+            </a>
+          </li>
+        </ul>
+          <!-- End Icons Navigation -->
+        </div><!-- End Header --> 
+
+      </div>
+    </div>
+    <div id="header" class="header fixed-top d-flex align-items-center sticky-top">
+      <div class="ms-auto  search-bar">
+        <!-- <form class="search-form mt-2 d-flex align-items-center" method="POST" action="#">
+          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+          <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form> -->
+      </div><!-- End Search Bar -->
+  </nav>
+  <!-- navbar -->
+
+  
+
+      
+            
+
+  
+  <div id="" class="container mt-5">
+
+    
